@@ -1,0 +1,491 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background: black;
+    color: black;
+    margin:0;
+}
+
+/* for navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.6);
+}
+
+.navbar h2{
+    text-shadow: 2px 2px 3px gold;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    text-shadow: 2px 2px 3px black;
+}
+@keyframes slideDownAnimation{
+    0%{
+        transform: translateY(-100px); opacity: 0;
+    }
+    100%{
+        transform: translateY(0); opacity: 1;
+    }
+}
+.navbar ul{
+    animation-name: slideDownAnimation;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+.navbar li{
+    margin-left: 20px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: gold;
+}
+
+/* for home page */
+.home-hero{
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;
+    background: url(images/thumbnail.png) no-repeat center center/cover;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+@keyframes fadeAnimation{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+}
+.home-hero {
+    animation-name: fadeAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: none;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    }
+
+
+.index-btn{
+    padding: 10px 20px;
+    background:gold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+button:hover{
+    background: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+ /* for residence page */
+.residence-hero{
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/residence.png') no-repeat center/cover;
+}
+
+.residence-hero h1{
+    padding: 10px;
+    font-size: 60px;
+    color: gold;
+    margin-bottom: -20px;
+    border-radius: 40px;
+    text-shadow: 2px 2px 3px white;
+}
+
+.residence-hero p{
+    font-size: 20px;
+    text-shadow: 2px 2px 2px gold;
+    color: white;
+}
+
+.room-details{
+    display: flex;
+}
+
+.rooms {
+    padding: 50px;
+    text-align: center;
+    margin: auto;
+}
+
+.rooms h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: gold;
+    text-shadow: 2px 2px 2px white;
+}
+.rooms h2{
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scroll 1s scrollamount="100";
+}
+
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+
+.room-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.room-card {
+    width: 300px;
+    background: rgb(218, 203, 203);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.room-card:hover {
+    transform: translateY(-10px);
+}
+
+.room-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.room-card h3 {
+    margin: 15px 0;
+    color: black;
+}
+
+.room-card p {
+    padding: 0 15px;
+    font-size: 14px;
+    color: gray;
+}
+
+.res-btn{
+    padding: 10px 20px;
+    background:gold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 40px;
+    font-weight: bold;
+}
+.res-btn{
+    animation-name: slideLeftAnimation;
+    animation-duration: 1.8s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+
+.res-btn:hover{
+    background: white;
+    color: black;
+}
+
+.room-card .res-btn {
+    margin: 15px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.room-card .res-btn:hover {
+    background: gold;
+    color: black;
+}
+
+.room-price{
+    color: black;
+    font-weight: bold;
+}
+
+/* contact section*/
+.contact-hero{
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(images/contact.page.jpg) no-repeat center center/cover;
+}
+
+.contact-container{
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+    color: black;
+}
+
+.contact-hero h1{
+    font-size: 40px;
+    margin-bottom: -20px;
+}
+
+.contact-box{
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.contact-info{
+    flex: 0;
+    background: rgba(255, 255, 255, 0.356);
+    padding:30px;
+    border-radius: 30px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.contact-form button{
+    padding: 10px 20px;
+    background: gold;
+    border: none;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: black;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+/* restaurant Section */
+.restaurant-hero{
+    min-height: 100vh;
+    background: url('images/restaurant.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero-text h1{
+    margin-bottom: -10px;
+    font-size: 60px;
+    text-shadow: 2px 2px 3px white;
+}
+
+.hero-text p{
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px gold;
+}
+
+/* Menu Section */
+.menu{
+    padding: 60px;
+    text-align: center;
+}
+
+.menu-items{
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.item{
+    background: #100f0f99;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    border: 1px solid gold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+.item h3{
+    color: gold;
+}
+
+.item p{
+    color: white;
+}
+
+/* Back Button */
+.back-home{
+    width: 200px;
+    border: 2px solid gold;
+    text-align: center;
+    margin: 30px;
+    padding: 10px;
+    margin: auto;
+    background: gold;
+    transition: all 0.3s ease;
+    border-radius: 40px;
+}
+
+.back-home:hover{
+    background: white;
+    border-color: white;
+    transform: scale(1.05);
+}
+
+.back-home a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Cafe section */
+
+.cafe-hero{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/cafe.png') no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.cafe-menu {
+    padding: 40px;
+    text-align: center;
+}
+
+.cafe-menu h2 {
+    color: gold;
+    margin-top: 60px;
+}
+
+.cafe-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.cafe-card {
+    background: #100f0f99;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    border: 1px solid gold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cafe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+.cafe-card h3 {
+    color: gold;
+}
+
+.cafe-card p {
+    color: white;
+}
+
+/* about section */
+.about-hero{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/about.png') no-repeat center/cover;
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+    color: white;
+    padding: 50px;
+}
+
+.hero-text h1{
+    margin-bottom: -30px;
+    font-size: 80px;
+    color: gold;
+}
+
+.hero-text p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.about-content{
+    padding: 60px;
+    background: #f5f5f5;
+    color: black;
+}
+
+.about-container{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text{
+    flex: 1;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+    text-shadow: 2px 2px 3px gold;
+}
